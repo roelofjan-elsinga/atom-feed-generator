@@ -36,7 +36,7 @@ $generator->add($feed_item);
 
 $atom_string = $generator->generate();
 
-print $xml_string;
+print $atom_string;
 
 ```
 
