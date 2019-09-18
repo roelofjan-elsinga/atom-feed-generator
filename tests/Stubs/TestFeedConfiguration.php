@@ -7,39 +7,38 @@ use Carbon\Carbon;
 
 class TestFeedConfiguration implements FeedConfiguration
 {
-
     /**
-     * The title of the Atom Feed
+     * The title of the Atom Feed.
      *
      * @return string
      */
     public function title(): string
     {
-        return "Test feed";
+        return 'Test feed';
     }
 
     /**
-     * The URL of the website for which this Atom Feed is generated
+     * The URL of the website for which this Atom Feed is generated.
      *
      * @return string
      */
     public function siteUrl(): string
     {
-        return "https://example.com";
+        return 'https://example.com';
     }
 
     /**
-     * The URL at which this feed can be accessed
+     * The URL at which this feed can be accessed.
      *
      * @return string
      */
     public function feedUrl(): string
     {
-        return "https://example.com/feed";
+        return 'https://example.com/feed';
     }
 
     /**
-     * The date at which this Atom feed is last modified
+     * The date at which this Atom feed is last modified.
      *
      * @return Carbon
      */
@@ -49,17 +48,17 @@ class TestFeedConfiguration implements FeedConfiguration
     }
 
     /**
-     * The author of the Atom feed
+     * The author of the Atom feed.
      *
      * @return string
      */
     public function author(): string
     {
-        return "Feed Author";
+        return 'Feed Author';
     }
 
     /**
-     * The identifier for this Atom feed
+     * The identifier for this Atom feed.
      *
      * @return string
      */

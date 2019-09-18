@@ -1,57 +1,54 @@
 <?php
 
-
 namespace AtomFeedGenerator\Tests\Stubs;
-
 
 use AtomFeedGenerator\FeedItem;
 use Carbon\Carbon;
 
 class TestFeedItemWithoutImage implements FeedItem
 {
-
     /**
-     * Get the title of the feed item
+     * Get the title of the feed item.
      *
      * @return string
      */
     public function title(): string
     {
-        return "Article title without image";
+        return 'Article title without image';
     }
 
     /**
-     * Get the accessible url of the feed item
+     * Get the accessible url of the feed item.
      *
      * @return string
      */
     public function url(): string
     {
-        return "articles/test-article-without-image";
+        return 'articles/test-article-without-image';
     }
 
     /**
-     * Get the description of the feed item
+     * Get the description of the feed item.
      *
      * @return string
      */
     public function content(): string
     {
-        return "This is the description";
+        return 'This is the description';
     }
 
     /**
-     * Get the summary of the feed item
+     * Get the summary of the feed item.
      *
      * @return string
      */
     public function summary(): string
     {
-        return "This is the summary";
+        return 'This is the summary';
     }
 
     /**
-     * Determine whether this feed item has an image
+     * Determine whether this feed item has an image.
      *
      * @return bool
      */
@@ -61,27 +58,27 @@ class TestFeedItemWithoutImage implements FeedItem
     }
 
     /**
-     * Get the URL of the image of the feed item
+     * Get the URL of the image of the feed item.
      *
      * @return string
      */
     public function imageUrl(): string
     {
-        return "";
+        return '';
     }
 
     /**
-     * Get the mime type of the image of the feed item
+     * Get the mime type of the image of the feed item.
      *
      * @return string
      */
     public function imageMimeType(): string
     {
-        return "";
+        return '';
     }
 
     /**
-     * Get the width of the image of the feed item
+     * Get the width of the image of the feed item.
      *
      * @return int
      */
@@ -91,7 +88,7 @@ class TestFeedItemWithoutImage implements FeedItem
     }
 
     /**
-     * Get the height of the image of the feed item
+     * Get the height of the image of the feed item.
      *
      * @return int
      */
@@ -101,7 +98,7 @@ class TestFeedItemWithoutImage implements FeedItem
     }
 
     /**
-     * Get the date on which the feed item was created
+     * Get the date on which the feed item was created.
      *
      * @return Carbon
      */
@@ -111,7 +108,7 @@ class TestFeedItemWithoutImage implements FeedItem
     }
 
     /**
-     * Get the date on which the feed item was last updated
+     * Get the date on which the feed item was last updated.
      *
      * @return Carbon
      */

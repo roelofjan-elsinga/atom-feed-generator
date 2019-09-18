@@ -1,8 +1,6 @@
 <?php
 
-
 namespace AtomFeedGenerator\Tests;
-
 
 use AtomFeedGenerator\AtomFeedGenerator;
 use AtomFeedGenerator\Tests\Stubs\TestFeedConfiguration;
@@ -12,7 +10,6 @@ use PHPUnit\Framework\TestCase;
 
 class AtomFeedGeneratorTest extends TestCase
 {
-
     public function testAnEmptyFeedCanBeGenerated()
     {
         $configuration = new TestFeedConfiguration();
@@ -40,9 +37,9 @@ class AtomFeedGeneratorTest extends TestCase
 
         $atom_feed = AtomFeedGenerator::withConfiguration($configuration)
 
-            ->add(new TestFeedItemWithImage)
+            ->add(new TestFeedItemWithImage())
 
-            ->add(new TestFeedItemWithoutImage)
+            ->add(new TestFeedItemWithoutImage())
 
             ->generate();
 
@@ -64,5 +61,4 @@ class AtomFeedGeneratorTest extends TestCase
 
         $this->assertNotFalse(strpos($atom_feed, '<id>https://example.com/articles/test-article-without-image</id>'));
     }
-
 }
