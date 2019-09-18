@@ -4,7 +4,7 @@ namespace AtomFeedGenerator;
 
 class AtomFeedGenerator
 {
-    /**@var array|FeedItem[]*/
+    /** @var array|FeedItem[] */
     private $links = [];
     /**
      * @var FeedConfiguration
@@ -13,6 +13,7 @@ class AtomFeedGenerator
 
     /**
      * AtomFeedGenerator constructor.
+     *
      * @param FeedConfiguration $configuration
      */
     public function __construct(FeedConfiguration $configuration)
@@ -21,23 +22,25 @@ class AtomFeedGenerator
     }
 
     /**
-     * Create a new instance for the given domain
+     * Create a new instance for the given domain.
      *
      * @param FeedConfiguration $configuration
+     *
      * @return AtomFeedGenerator
      */
-    public static function withConfiguration(FeedConfiguration $configuration): AtomFeedGenerator
+    public static function withConfiguration(FeedConfiguration $configuration): self
     {
         return new static($configuration);
     }
 
     /**
-     * Add a FeedItem to the links list
+     * Add a FeedItem to the links list.
      *
      * @param FeedItem $item
+     *
      * @return AtomFeedGenerator
      */
-    public function add(FeedItem $item): AtomFeedGenerator
+    public function add(FeedItem $item): self
     {
         $this->links[] = $item;
 
@@ -45,7 +48,7 @@ class AtomFeedGenerator
     }
 
     /**
-     * Generate the atom string
+     * Generate the atom string.
      *
      * @return string
      */
@@ -63,7 +66,7 @@ class AtomFeedGenerator
     }
 
     /**
-     * Generate the Atom File Header
+     * Generate the Atom File Header.
      *
      * @return string
      */
@@ -73,7 +76,7 @@ class AtomFeedGenerator
     }
 
     /**
-     * Generate the meta information of the Atom feed
+     * Generate the meta information of the Atom feed.
      *
      * @return string
      */
@@ -90,18 +93,17 @@ class AtomFeedGenerator
     }
 
     /**
-     * Generate the links of the Atom feed
+     * Generate the links of the Atom feed.
      *
      * @return string
      */
     private function generateLinks(): string
     {
-        $entries = array_map(function(FeedItem $item): string {
-
+        $entries = array_map(function (FeedItem $item): string {
             $image_string = '';
 
-            if($item->hasImage()) {
-                $image_string = "<media:content xmlns:media=\"http://search.yahoo.com/mrss/\" ";
+            if ($item->hasImage()) {
+                $image_string = '<media:content xmlns:media="http://search.yahoo.com/mrss/" ';
                 $image_string .= "url=\"{$item->imageUrl()}\" medium=\"image\" ";
                 $image_string .= "type=\"{$item->imageMimeType()}\" width=\"{$item->imageWidth()}\" ";
                 $image_string .= "height=\"{$item->imageHeight()}\" />";
@@ -123,7 +125,7 @@ class AtomFeedGenerator
     }
 
     /**
-     * Generate the footer of the Atom feed
+     * Generate the footer of the Atom feed.
      *
      * @return string
      */
