@@ -1,11 +1,10 @@
-<p align="center">
+# Atom Feed Generator
+
 <a href="https://travis-ci.com/roelofjan-elsinga/atom-feed-generator"><img src="https://travis-ci.com/roelofjan-elsinga/atom-feed-generator.svg" alt="Build Status"></a>
+<img src="https://github.styleci.io/repos/202346461/shield" alt="StyleCI Status">
 <a href="https://packagist.org/packages/roelofjan-elsinga/atom-feed-generator"><img src="https://poser.pugx.org/roelofjan-elsinga/atom-feed-generator/downloads" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/roelofjan-elsinga/atom-feed-generator"><img src="https://poser.pugx.org/roelofjan-elsinga/atom-feed-generator/v/stable" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/roelofjan-elsinga/atom-feed-generator"><img src="https://poser.pugx.org/roelofjan-elsinga/atom-feed-generator/license" alt="License"></a>
-</p>
-
-# Atom Feed Generator
 
 This package helps you to very easily generate an Atom Feed for your website.
 
