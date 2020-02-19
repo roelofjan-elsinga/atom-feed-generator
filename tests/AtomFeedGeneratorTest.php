@@ -49,7 +49,7 @@ class AtomFeedGeneratorTest extends TestCase
 
         $this->assertNotFalse(strpos($atom_feed, '<id>https://example.com/articles/test-article</id>'));
 
-        $this->assertNotFalse(strpos($atom_feed, '<content:encoded><![CDATA[This is the description]]></content:encoded>'));
+        $this->assertNotFalse(strpos($atom_feed, '<content type="html"><![CDATA[This is the description]]></content>'));
 
         $this->assertNotFalse(strpos($atom_feed, '<summary><![CDATA[This is the summary]]></summary>'));
 
