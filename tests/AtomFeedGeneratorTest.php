@@ -43,7 +43,7 @@ class AtomFeedGeneratorTest extends TestCase
 
             ->generate();
 
-        $this->assertNotFalse(strpos($atom_feed, '<title><![CDATA[Article title]]></title>'));
+        $this->assertNotFalse(strpos($atom_feed, '<title>Article title</title>'));
 
         $this->assertNotFalse(strpos($atom_feed, '<link href="https://example.com/articles/test-article"/>'));
 
@@ -51,11 +51,11 @@ class AtomFeedGeneratorTest extends TestCase
 
         $this->assertNotFalse(strpos($atom_feed, '<content type="html"><![CDATA[This is the description]]></content>'));
 
-        $this->assertNotFalse(strpos($atom_feed, '<summary><![CDATA[This is the summary]]></summary>'));
+        $this->assertNotFalse(strpos($atom_feed, '<summary>This is the summary</summary>'));
 
         $this->assertNotFalse(strpos($atom_feed, '<media:content xmlns:media="http://search.yahoo.com/mrss/" url="/images/test-image.jpg" medium="image" type="image/jpeg" width="1920" height="1080" />'));
 
-        $this->assertNotFalse(strpos($atom_feed, '<title><![CDATA[Article title without image]]></title>'));
+        $this->assertNotFalse(strpos($atom_feed, '<title>Article title without image</title>'));
 
         $this->assertNotFalse(strpos($atom_feed, '<link href="https://example.com/articles/test-article-without-image"/>'));
 

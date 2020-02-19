@@ -110,13 +110,13 @@ class AtomFeedGenerator
             }
 
             return "<entry>
-                    <title>{$this->wrapContent($item->title())}</title>
+                    <title>{$item->title()}</title>
                     <link href=\"{$this->configuration->siteUrl()}/{$item->url()}\"/>
                     <id>{$this->configuration->siteUrl()}/{$item->url()}</id>
                     <updated>{$item->updatedAt()->toAtomString()}</updated>
                     <published>{$item->createdAt()->toAtomString()}</published>
                     <content type=\"html\">{$this->wrapContent($item->content())}</content>
-                    <summary>{$this->wrapContent($item->summary())}</summary>
+                    <summary>{$item->summary()}</summary>
                     {$image_string}
                   </entry>\n";
         }, $this->links);
