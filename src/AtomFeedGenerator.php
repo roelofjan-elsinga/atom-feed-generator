@@ -110,18 +110,29 @@ class AtomFeedGenerator
             }
 
             return "<entry>
-                    <title>{$item->title()}</title>
+                    <title>{$this->wrapContent($item->title())}</title>
                     <link href=\"{$this->configuration->siteUrl()}/{$item->url()}\"/>
                     <id>{$this->configuration->siteUrl()}/{$item->url()}</id>
                     <updated>{$item->updatedAt()->toAtomString()}</updated>
                     <published>{$item->createdAt()->toAtomString()}</published>
-                    <content>{$item->content()}</content>
-                    <summary>{$item->summary()}</summary>
+                    <content:encoded>{$this->wrapContent($item->content())}</content:encoded>
+                    <summary>{$this->wrapContent($item->summary())}</summary>
                     {$image_string}
                   </entry>\n";
         }, $this->links);
 
         return implode('', $entries);
+    }
+
+    /**
+     * Wrap content in CDATA to escape any entity parsing
+     *
+     * @param string $content
+     * @return string
+     */
+    private function wrapContent(string $content): string
+    {
+        return "<![CDATA[{$content}]]>";
     }
 
     /**
