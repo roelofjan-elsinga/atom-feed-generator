@@ -116,7 +116,7 @@ class AtomFeedGenerator
                     <updated>{$item->updatedAt()->toAtomString()}</updated>
                     <published>{$item->createdAt()->toAtomString()}</published>
                     <content type=\"html\">{$this->wrapContent($item->content())}</content>
-                    <summary>{$item->summary()}</summary>
+                    <summary>{$this->wrapContent($item->summary())}</summary>
                     {$image_string}
                   </entry>\n";
         }, $this->links);
