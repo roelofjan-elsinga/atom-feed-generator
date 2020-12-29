@@ -110,7 +110,7 @@ class AtomFeedGenerator
             }
 
             return "<entry>
-                    <title>{$item->title()}</title>
+                    <title>{$this->wrapContent($item->title())}</title>
                     <link href=\"{$this->configuration->siteUrl()}/{$item->url()}\"/>
                     <id>{$this->configuration->siteUrl()}/{$item->url()}</id>
                     <updated>{$item->updatedAt()->toAtomString()}</updated>
