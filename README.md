@@ -1,6 +1,6 @@
 # Atom Feed Generator
 
-[![Build status](https://travis-ci.com/roelofjan-elsinga/atom-feed-generator.svg)](https://travis-ci.com/roelofjan-elsinga/atom-feed-generator)
+[![Tests](https://github.com/roelofjan-elsinga/atom-feed-generator/actions/workflows/tests.yml/badge.svg)](https://github.com/roelofjan-elsinga/atom-feed-generator/actions/workflows/tests.yml)
 [![StyleCI Status](https://github.styleci.io/repos/202346461/shield)](https://github.styleci.io/repos/202346461)
 [![Code coverage](https://codecov.io/gh/roelofjan-elsinga/atom-feed-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/roelofjan-elsinga/atom-feed-generator)
 [![Total Downloads](https://poser.pugx.org/roelofjan-elsinga/atom-feed-generator/downloads)](https://packagist.org/packages/roelofjan-elsinga/atom-feed-generator)
